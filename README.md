@@ -29,7 +29,7 @@ This repository contains a set of MATLAB scripts for simulating stochastic diffe
 
 ### 📄 Report Summary
 
-The accompanying PDF file `BARrier_options.pdf` contains the full report for this project. The primary objective of this practical work is to investigate the numerical challenges in simulating **path-dependent options**, particularly focusing on **barrier options**. The report addresses several key goals:
+The accompanying PDF file `Barrier_options.pdf` contains the full report for this project. The primary objective of this practical work is to investigate the numerical challenges in simulating **path-dependent options**, particularly focusing on **barrier options**. The report addresses several key goals:
 
 1. Deriving and solving boundary value problems for down-and-out European call options, comparing these with vanilla calls.
 2. Implementing **Euler–Maruyama simulations** to study weak convergence in both Gaussian and non-Gaussian settings.
