@@ -18,7 +18,7 @@ This repository contains a set of MATLAB scripts for simulating stochastic diffe
   Generates sample paths of a Brownian Bridge. Used by the OU pricing models to interpolate barrier crossings.
 
 ### 3. Geometric Brownian Motion (GBM) Weak Convergence Study
-- **`GBM.m`**  
+- **`GBM_WeakConvergence_Simulation.m`**  
   Compares **weak convergence** of Euler-Maruyama discretization against exact solutions and against a finer time-step (2h method). Demonstrates error reduction with finer timesteps.
 
 ### 4. Survival Probability Estimation in Population Models
@@ -27,18 +27,16 @@ This repository contains a set of MATLAB scripts for simulating stochastic diffe
 
 ---
 
-## 🔧 Requirements
+### 📄 Report Summary
 
-- MATLAB R2020+ (or compatible)
-- No external toolboxes required
-- Sufficient memory for large simulations (1e7 samples used in some files)
+The accompanying PDF file `BARrier_options.pdf` contains the full report for this project. The primary objective of this practical work is to investigate the numerical challenges in simulating **path-dependent options**, particularly focusing on **barrier options**. The report addresses several key goals:
 
----
+1. Deriving and solving boundary value problems for down-and-out European call options, comparing these with vanilla calls.
+2. Implementing **Euler–Maruyama simulations** to study weak convergence in both Gaussian and non-Gaussian settings.
+3. Applying techniques like the **Brownian bridge correction** and **barrier shifting** to improve simulation accuracy.
+4. Exploring stochastic models such as the **Ornstein–Uhlenbeck process** and **Geometric Brownian Motion (GBM)** in the presence of barriers.
+5. Estimating **survival probabilities** in stochastic population models using numerical and semi-analytical approaches.
 
-## ▶️ How to Run
+Through these approaches, the report evaluates bias, statistical error, and computational efficiency to identify effective strategies for accurate and efficient simulation in financial mathematics.
 
-Each script is a standalone function. You can call them with appropriate parameters. For example:
 
-```matlab
-[V, ster, CPUt, varsc, eb] = ouscratch_bb(1e5, 64, 42, 1);
-[prob, err, ~, time, var, paths] = malthusian(1e6, 100, 1234);
